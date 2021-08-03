@@ -1,0 +1,65 @@
+name: kobylka-3302-sandbox
+
+hosts:
+  - name: attacker
+    base_box: 
+      image: munikypo/kali-2020.4
+      man_user: debian
+    flavor: csirtmu.tiny1x2
+
+  - name: web
+    base_box: 
+      image: munikypo/debian-10
+      man_user: debian
+    flavor: csirtmu.tiny1x2
+    hidden: True
+
+  - name: client
+    base_box: 
+      image: munikypo/debian-10
+      man_user: debian
+    flavor: csirtmu.tiny1x2
+    hidden: True
+
+routers:
+  - name: router
+    cidr: 100.100.100.0/29
+    base_box:
+      image: munikypo/debian-10
+      man_user: debian
+    flavor: csirtmu.tiny1x2
+
+networks:
+  - name: big-broker
+    cidr: 172.18.1.0/24
+    accessible_by_user: False
+
+  - name: internet
+    cidr: 10.1.0.0/16
+
+net_mappings:
+  - host: web
+    network: big-broker
+    ip: 172.18.1.5
+
+  - host: client
+    network: internet
+    ip: 10.1.17.4
+
+  - host: attacker
+    network: internet
+    ip: 10.1.135.83
+
+router_mappings:
+  - router: router
+    network: big-broker
+    ip: 172.18.1.1
+
+  - router: router
+    network: internet
+    ip: 10.1.0.1
+
+groups:
+  - name: user-accessible
+    nodes:
+      - attacker
