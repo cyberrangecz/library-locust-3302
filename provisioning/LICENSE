@@ -1,6 +1,4 @@
-The game is licensed under the MIT License, with the exception of the file roles/attacker/files/ssh2john.py under the GNU Lesser General Public License (see the file itself).
-
-For the remaining content, the MIT License applies:
+The MIT License
 Copyright (c) 2019 Adam Chovanec, Hana Pospíšilová, Peter Jaško
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

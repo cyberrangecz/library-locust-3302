@@ -38,12 +38,12 @@
     group: kali
     mode: 0666
 
-- name: Copy ssh2john to the machine
-  copy:
-      src: ssh2john.py
-      dest: /kali/
-      owner: kali
-      group: kali
-      mode: 0777
+- name: download ssh2john.py
+  get_url:
+    url: https://github.com/openwall/john/blob/bleeding-jumbo/run/ssh2john.py
+    dest: ~/ssh2john.py
+    owner: kali
+    group: kali
+    mode: 0777
 
 ...
