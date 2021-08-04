@@ -42,6 +42,7 @@ Vagrant.configure("2") do |config|
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "provisioning/playbook.yml"
       ansible.groups = ansible_groups
+      ansible.raw_arguments = Shellwords.shellsplit(ENV['ANSIBLE_ARGS']) if ENV['ANSIBLE_ARGS']
       ansible.galaxy_role_file = "provisioning/requirements.yml"
       ansible.galaxy_roles_path = "provisioning/roles"
       ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
@@ -73,6 +74,7 @@ Vagrant.configure("2") do |config|
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "provisioning/playbook.yml"
       ansible.groups = ansible_groups
+      ansible.raw_arguments = Shellwords.shellsplit(ENV['ANSIBLE_ARGS']) if ENV['ANSIBLE_ARGS']
       ansible.galaxy_role_file = "provisioning/requirements.yml"
       ansible.galaxy_roles_path = "provisioning/roles"
       ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
@@ -104,6 +106,7 @@ Vagrant.configure("2") do |config|
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "provisioning/playbook.yml"
       ansible.groups = ansible_groups
+      ansible.raw_arguments = Shellwords.shellsplit(ENV['ANSIBLE_ARGS']) if ENV['ANSIBLE_ARGS']
       ansible.galaxy_role_file = "provisioning/requirements.yml"
       ansible.galaxy_roles_path = "provisioning/roles"
       ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"
@@ -135,6 +138,7 @@ Vagrant.configure("2") do |config|
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "provisioning/playbook.yml"
       ansible.groups = ansible_groups
+      ansible.raw_arguments = Shellwords.shellsplit(ENV['ANSIBLE_ARGS']) if ENV['ANSIBLE_ARGS']
       ansible.galaxy_role_file = "provisioning/requirements.yml"
       ansible.galaxy_roles_path = "provisioning/roles"
       ansible.galaxy_command = "sudo ansible-galaxy install --role-file=%{role_file} --roles-path=%{roles_path} --force"

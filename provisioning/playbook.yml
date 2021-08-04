@@ -38,7 +38,7 @@
 - name: setup logging bash
   hosts:
     - attacker
-    - server
+    - web
     - client
   gather_facts: yes
   become: yes
