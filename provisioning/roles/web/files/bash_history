@@ -1,0 +1,59 @@
+ping 10.1.18.22
+ls top-secret/bank_accounts
+tools/goldman_sachs_group_backdoor top-secret/bank_accounts/zuccy > zuccy_password
+mv zuccy_password /media/eve/thumb_drive
+logout
+rudy -t "https://www.republican.senate.gov/public/" -d 5 -n 500 --useTor --torUrl "127.0.0.1" -m "GET"
+logout
+nmap 75.2.19.65
+ls Pictures
+cd Pictures
+cd Memes
+rm Pikachu
+sudo rm Pikachu -r
+ls
+ls -a
+cd ..
+cd mathematics
+cd blonde
+cd ..
+cd aisan
+vlc 23455342.mp4
+logout
+nmap 75.2.19.65
+ls
+cd Documents/
+ls
+ls -a
+cd .hidden_directory
+ls -a
+okular IB002.pdf
+cd ..
+ls -a
+cat todo_list.txt
+vim todo_list.txt
+grep "how to cure depression" /home/eve/Documents/self_help_notes/ -r
+rm todo_list.txt
+cd ~/Pictures/memes/
+nautilus .
+logout
+ping 10.1.17.4
+nmap 100.22.5.8
+ls
+cd top-secret/
+cd hitlist
+bash lauch_attack
+bash launch_attack
+sudo bash launch_attack
+find /tmp -name target -type f -print | xargs /bin/rm -f
+:q
+logout
+scp -r * eve@10.1.17.4:/home/eve/
+rm /home/eve/* -rf
+logout
+ping 10.1.18.22
+nmap 81.2.195.254
+cat /etc/services
+less /etc/services
+echo '81.2.195.254' >> ~/top-secret/too_dangerous.txt
+logout

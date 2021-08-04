@@ -1,0 +1,8 @@
+---
+device_aliases:
+  10.1.0.1: router
+  10.1.135.83: attacker
+  10.1.17.4: client
+  172.18.1.1: router
+  172.18.1.5: web
+...

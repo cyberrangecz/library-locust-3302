@@ -1,0 +1,60 @@
+---
+# This is a role for the host client.
+# You can write your tasks here.
+# These changes will affect only the host client.
+
+# ==== users =====
+
+- name: Create user eve
+  user:
+    name: eve
+    password: "{{ 'cvnpqwoiufdsjlfdafksd' | password_hash('sha512') }}"
+    shell: /bin/bash
+    state: present
+    createhome: yes
+    update_password: always
+
+- name: Create user zdislav
+  user:
+    name: zdislav
+    password: "{{ 'zdislavfromczechiagqubv' | password_hash('sha512') }}"
+    shell: /bin/bash
+    state: present
+    createhome: yes
+    update_password: always
+
+# ==== ssh =====
+
+- name: Create .ssh directory
+  file:
+    path: /home/eve/.ssh
+    state: directory
+    owner: eve
+    group: eve
+    mode: 0700
+
+- name: copy web's public key to .ssh/authorized_keys
+  copy:
+    src: id_rsa.pub
+    dest: /home/eve/.ssh/authorized_keys
+    owner: eve
+    group: eve
+    mode: 0600
+
+# ==== flag =====
+
+- name: create top-secret dir
+  file:
+    path: /home/eve/top-secret
+    state: directory
+    owner: eve
+    group: eve
+
+- name: copy flag to machine
+  copy:
+    src: flag.txt
+    dest: /home/eve/top-secret/flag.txt
+    owner: eve
+    group: eve
+
+...

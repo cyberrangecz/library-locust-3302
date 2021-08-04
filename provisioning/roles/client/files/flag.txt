@@ -1,0 +1,39 @@
+#############################
+#############################
+##                         ## 
+##  ---------------------  ## 
+##  || CONGRATULATIONS ||  ## 
+##  ---------------------  ## 
+##                         ## 
+##  YOU HAVE SUCCESFULLY   ##
+##  COMPLETED OUR TEST     ##  
+##                         ##
+##  YOU DIDN'T REALLY      ##       
+##  THINK YOU COULD HACK   ##    
+##  INTO OUR SERVER, DID   ##   
+##  YOU?                   ## 
+##                         ##
+##  ANYWAY, YOU HAVE       ##
+##  PROVEN YOU HAVE A VERY ##
+##  VALUEABLE SKILLSET.    ##
+##                         ##
+##  AND IT JUST HAPPENS    ##
+##  THAT WE'RE HIRING.     ##
+##                         ##
+##  MAKE NO MISTAKE.       ##
+##  NOT ANYTHING YOU HEAR  ##
+##  ON THE NEWS IS TRUE.   ##
+##                         ##
+##  WE ARE NO CRIMIMALS.   ##
+##  WE ARE CYBER CATS      ##
+##  LIVING ON THE OTHER    ## 
+##  SIDE OF THE MOON.      ##
+##                         ##
+##  I'M JUST KIDDING.      ##
+##                         ##
+##  OR AM I?               ##
+##                         ##
+##         flag : 58345    ##
+##                         ##
+#############################
+#############################
