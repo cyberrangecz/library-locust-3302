@@ -1,4 +1,4 @@
-# Cybersecurity game "Kobylka 3302"
+# Cybersecurity game "Locust 3302"
 
 This cybersecurity game allows a **hands-on demonstration and practice** of topics such as network scanning, SSH connections, and password cracking. It is suitable for undergraduate students in computing.
 
