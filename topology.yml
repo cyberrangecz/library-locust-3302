@@ -1,33 +1,36 @@
-name: kobylka-3302-sandbox
+name: locust-3302-sandbox
 
 hosts:
   - name: attacker
     base_box: 
-      image: munikypo/kali-2020.4
-      man_user: debian
+      image: kali-2020.4
+      mgmt_user: debian
     flavor: csirtmu.tiny1x2
 
   - name: web
     base_box: 
-      image: munikypo/debian-10
-      man_user: debian
+      image: debian-10
+      mgmt_user: debian
     flavor: csirtmu.tiny1x2
     hidden: True
 
   - name: client
     base_box: 
-      image: munikypo/debian-10
-      man_user: debian
+      image: debian-10
+      mgmt_user: debian
     flavor: csirtmu.tiny1x2
     hidden: True
 
 routers:
   - name: router
-    cidr: 100.100.100.0/29
     base_box:
-      image: munikypo/debian-10
-      man_user: debian
+      image: debian-10
+      mgmt_user: debian
     flavor: csirtmu.tiny1x2
+
+wan:
+  name: internet-connection
+  cidr: 100.100.100.0/24
 
 networks:
   - name: big-broker
