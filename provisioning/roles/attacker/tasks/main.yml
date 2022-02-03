@@ -40,7 +40,7 @@
 
 - name: download ssh2john.py
   get_url:
-    url: https://github.com/openwall/john/blob/bleeding-jumbo/run/ssh2john.py
+    url: https://raw.githubusercontent.com/openwall/john/bleeding-jumbo/run/ssh2john.py
     dest: /home/kali/ssh2john.py
     owner: kali
     group: kali
