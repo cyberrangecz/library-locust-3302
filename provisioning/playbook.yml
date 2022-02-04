@@ -7,9 +7,6 @@
   become: yes
   roles:
     - hosts
-    - role: kypo-user-access
-      kypo_user_access_username: kali
-      kypo_user_access_password: kali
 
 # Installation and configuration of each host
 - name: Configuring devices separately
@@ -19,6 +16,15 @@
   - name: include role
     include_role:
       name: "{{ inventory_hostname }}"
+
+# Enable SSH access to attacker
+- name: Configuring hosts
+  hosts: attacker
+  become: yes
+  roles:
+    - role: kypo-user-access
+      kypo_user_access_username: kali
+      kypo_user_access_password: kali
 
 # Enable logging
 - hosts: attacker
