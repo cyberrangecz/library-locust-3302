@@ -7,7 +7,8 @@
   become: yes
   roles:
     - hosts
-    - kypo-user-access
+    - role: kypo-user-access
+      kypo_user_access_username: kypo
 
 # Installation and configuration of each host
 - name: Configuring devices separately
