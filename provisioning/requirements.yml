@@ -27,3 +27,7 @@
   src: https://gitlab.ics.muni.cz/muni-kypo/ansible-roles/hosts-aliases.git
   scm: git
   version: 1.0.0
+
+- name: kypo-user-access
+  src: https://gitlab.ics.muni.cz/muni-kypo/ansible-roles/kypo-user-access.git
+  scm: git
