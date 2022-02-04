@@ -8,6 +8,8 @@
   roles:
     - hosts
     - role: kypo-user-access
+      kypo_user_access_username: kali
+      kypo_user_access_password: kali
 
 # Installation and configuration of each host
 - name: Configuring devices separately
