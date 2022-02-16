@@ -8,6 +8,6 @@ if ( $Args.Count -ne 1 )
 else
 {
 	$id = $($args[0])
-    $Env:ANSIBLE_ARGS='--extra-vars "student_id={0}"' -f $id
+	"student_id: {0}" -f $id | Out-File -FilePath preconfig\group_vars\ansible.yml
     vagrant up
 }
