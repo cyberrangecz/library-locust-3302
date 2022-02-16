@@ -37,7 +37,7 @@ networks:
     cidr: 172.18.1.0/24
     accessible_by_user: False
 
-  - name: internet
+  - name: outside-network
     cidr: 10.1.0.0/16
 
 net_mappings:
@@ -46,11 +46,11 @@ net_mappings:
     ip: 172.18.1.5
 
   - host: client
-    network: internet
+    network: outside-network
     ip: 10.1.17.4
 
   - host: attacker
-    network: internet
+    network: outside-network
     ip: 10.1.135.83
 
 router_mappings:
@@ -59,7 +59,7 @@ router_mappings:
     ip: 172.18.1.1
 
   - router: router
-    network: internet
+    network: outside-network
     ip: 10.1.0.1
 
 groups:
