@@ -46,4 +46,16 @@
     group: kali
     mode: 0777
 
+- name: Enable ssh password authentication
+  replace:
+    path: '/etc/ssh/sshd_config'
+    regexp: 'PasswordAuthentication no'
+    replace: 'PasswordAuthentication yes'
+    backup: no
+
+- name: Restart ssh service
+  service:
+    name: ssh
+    state: restarted
+    enabled: yes
 ...
