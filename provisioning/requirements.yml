@@ -1,7 +1,7 @@
 - name: sandbox-logging-bash
   src: https://gitlab.ics.muni.cz/muni-kypo/ansible-roles/sandbox-logging-bash.git
   scm: git
-  version: 9-fix-logging-of-commands-in-zsh
+  version: 1.0.5
 
 - name: sandbox-logging-msf
   src: https://gitlab.ics.muni.cz/muni-kypo/ansible-roles/sandbox-logging-msf.git
