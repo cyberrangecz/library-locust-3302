@@ -14,7 +14,7 @@
 
 - name: install Webmin Perl dependencies
   apt:
-    name: [libtime-local-perl]
+    name: libtime-local-perl
     state: present
     update_cache: yes
 
