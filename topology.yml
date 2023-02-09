@@ -39,6 +39,10 @@ networks:
 
   - name: outside-network
     cidr: 10.1.0.0/16
+    accessible_by_user: False
+
+  - name: attacker-network
+    cidr: 10.10.0.0/16
 
 net_mappings:
   - host: web
@@ -50,8 +54,8 @@ net_mappings:
     ip: 10.1.17.4
 
   - host: attacker
-    network: outside-network
-    ip: 10.1.135.83
+    network: attacker-network
+    ip: 10.10.135.83
 
 router_mappings:
   - router: router
@@ -61,5 +65,9 @@ router_mappings:
   - router: router
     network: outside-network
     ip: 10.1.0.1
+
+  - router: router
+    network: attacker-network
+    ip: 10.10.0.1
 
 groups: []
