@@ -1,10 +1,24 @@
 # Cybersecurity game "Locust 3302"
+Linear game for [KYPO CRP](https://docs.crp.kypo.muni.cz/).
 
-This cybersecurity game allows a **hands-on demonstration and practice** of topics such as network scanning, SSH connections, and password cracking. It is suitable for undergraduate students in computing.
+## Game Levels Summary
+- host scan with `nmap`
+- vulnerability search with Google or `metasploit`
+- exploit `webmin` with `metasploit`
+- host exploration and analysis of `.bash_history`
+- private SSH key password cracking with `john`
+- connect with SSH key
 
-Please follow the [general instructions](https://gitlab.ics.muni.cz/muni-kypo-trainings/games/all-games-index) to set up the game, learn more about its [licensing](https://gitlab.ics.muni.cz/muni-kypo-trainings/games/all-games-index#license), and see how to [cite it](https://gitlab.ics.muni.cz/muni-kypo-trainings/games/all-games-index#how-to-cite-the-games).
+## Topology summary
+|Host|Image|Flavor|
+|-|-|-|
+|attacker|kali|csirtmu.tiny1x2|
+|web|debian-10|csirtmu.tiny1x2|
+|client|debian-10|csirtmu.tiny1x2|
+|router|debian-10|csirtmu.tiny1x2|
 
-## Credits
+## License and Credits
+See [licensing](https://gitlab.ics.muni.cz/muni-kypo-trainings/games/all-games-index#license) and how to [cite it](https://gitlab.ics.muni.cz/muni-kypo-trainings/games/all-games-index#how-to-cite-the-games).
 
 [Cybersecurity Laboratory](https://cybersec.fi.muni.cz)\
 Faculty of Informatics\
