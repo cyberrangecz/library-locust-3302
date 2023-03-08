@@ -27,23 +27,23 @@
   file:
     path: /usr/share/wordlists
     state: directory
-    owner: kali
-    group: kali
+    owner: user
+    group: user
 
 - name: Copy wordlists to the machine
   copy:
     src: rockyou.txt
     dest: /usr/share/wordlists
-    owner: kali
-    group: kali
+    owner: user
+    group: user
     mode: 0666
 
 - name: download ssh2john.py
   get_url:
     url: https://raw.githubusercontent.com/openwall/john/bleeding-jumbo/run/ssh2john.py
-    dest: /home/kali/ssh2john.py
-    owner: kali
-    group: kali
+    dest: /home/user/ssh2john.py
+    owner: user
+    group: user
     mode: 0777
 
 ...
