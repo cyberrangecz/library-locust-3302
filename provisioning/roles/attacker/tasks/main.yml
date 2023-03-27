@@ -24,10 +24,7 @@
     update_cache: yes
 
 - name: Unarchive rockyou wordlist
-  unarchive:
-    src: /usr/share/wordlists/rockyou.txt.gz
-    dest: /usr/share/wordlists
-    remote_src: yes
+  command: gunzip /usr/share/wordlists/rockyou.txt.gz
 
 - name: Remove other wordlists
   file:
