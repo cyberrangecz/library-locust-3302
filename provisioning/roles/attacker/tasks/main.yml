@@ -23,20 +23,21 @@
     state: present
     update_cache: yes
 
-- name: create /usr/share/wordlists directory
-  file:
-    path: /usr/share/wordlists
-    state: directory
-    owner: user
-    group: user
+- name: Unarchive rockyou wordlist
+  command: gunzip /usr/share/wordlists/rockyou.txt.gz
 
-- name: Copy wordlists to the machine
-  copy:
-    src: rockyou.txt
-    dest: /usr/share/wordlists
-    owner: user
-    group: user
-    mode: 0666
+- name: Remove other wordlists
+  file:
+      path: "/usr/share/wordlists/{{ item }}"
+      state: absent
+  with_items:
+    -  dirb
+    -  dirbuster
+    -  fern-wifi
+    -  metasploit
+    -  nmap.lst
+    -  wfuzz
+    -  fasttrack.txt
 
 - name: download ssh2john.py
   get_url:
