@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   # Device(router): router
   config.vm.define "router" do |device|
     device.vm.hostname = "router"
-    device.vm.box = "debian-10-x86_64"
+    device.vm.box = "debian-10"
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 2048
       vb.cpus = 1
