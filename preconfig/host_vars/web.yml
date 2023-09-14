@@ -1,4 +1,8 @@
 ---
+device_aliases:
+  10.1.17.4: client
+  10.10.135.83: attacker
+  172.18.1.1: router
 routes:
 - interface_default_gateway: '{{ ansible_default_ipv4.gateway }}'
   interface_ip: '{{ ansible_default_ipv4.address  | default(ansible_all_ipv4_addresses[0])
