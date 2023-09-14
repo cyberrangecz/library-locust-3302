@@ -24,7 +24,7 @@ hosts:
 routers:
   - name: router
     base_box:
-      image: debian-10-x86_64
+      image: debian-10
       mgmt_user: debian
     flavor: csirtmu.tiny1x2
 
