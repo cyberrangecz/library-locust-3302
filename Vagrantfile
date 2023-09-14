@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   # Device(router): router
   config.vm.define "router" do |device|
     device.vm.hostname = "router"
-    device.vm.box = "debian-10"
+    device.vm.box = "munikypo/debian-10"
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 2048
       vb.cpus = 1
@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
   # Device(host): attacker
   config.vm.define "attacker" do |device|
     device.vm.hostname = "attacker"
-    device.vm.box = "kali"
+    device.vm.box = "munikypo/kali"
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 2048
       vb.cpus = 1
@@ -85,7 +85,7 @@ Vagrant.configure("2") do |config|
   # Device(host): web
   config.vm.define "web" do |device|
     device.vm.hostname = "web"
-    device.vm.box = "debian-10"
+    device.vm.box = "munikypo/debian-10"
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 2048
       vb.cpus = 1
@@ -113,7 +113,7 @@ Vagrant.configure("2") do |config|
   # Device(host): client
   config.vm.define "client" do |device|
     device.vm.hostname = "client"
-    device.vm.box = "debian-10"
+    device.vm.box = "munikypo/debian-10"
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 2048
       vb.cpus = 1
