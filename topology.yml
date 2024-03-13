@@ -5,20 +5,20 @@ hosts:
     base_box:
       image: kali
       mgmt_user: debian
-    flavor: csirtmu.tiny1x2
+    flavor: standard.small
 
   - name: web
     base_box:
       image: debian-10
       mgmt_user: debian
-    flavor: csirtmu.tiny1x2
+    flavor: standard.small
     hidden: True
 
   - name: client
     base_box:
       image: debian-10
       mgmt_user: debian
-    flavor: csirtmu.tiny1x2
+    flavor: standard.small
     hidden: True
 
 routers:
@@ -26,7 +26,7 @@ routers:
     base_box:
       image: debian-10
       mgmt_user: debian
-    flavor: csirtmu.tiny1x2
+    flavor: standard.small
 
 wan:
   name: internet-connection
