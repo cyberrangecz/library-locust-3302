@@ -5,7 +5,7 @@
 
 # ==== WEBMIN ====
 - name: copy webmin archive to /tmp
-  copy: 
+  copy:
     src: webmin.tar.gz
     dest: /tmp/
 
@@ -27,7 +27,6 @@
     regexp: "passwd_mode=0"
     line: "passwd_mode=2"
 
-    
 # ==== USERS ====
 - name: Create user alice
   user:
@@ -60,55 +59,35 @@
 
 - name: Create .ssh directory
   file:
-   path: /home/eve/.ssh
-   state: directory
-   mode: 0700
-   owner: eve
-   group: eve
+    path: /home/eve/.ssh
+    state: directory
+    mode: '0700'
+    owner: eve
+    group: eve
 
 - name: Copy public ssh key to the machine
   copy:
-    src:  id_rsa.pub
+    src: id_rsa.pub
     dest: /home/eve/.ssh/id_rsa.pub
     owner: eve
-    mode: 0644
+    mode: '0644'
 
 - name: Copy private ssh key to the machine
   copy:
-    src:  id_rsa
+    src: id_rsa
     dest: /home/eve/.ssh/id_rsa
     owner: eve
-    mode: 0600
-
-# lookup is not compatible with KYPO Python and Ansible versions
-#- name: Add 10.1.17.4 to known hosts (1/2)
-#  lineinfile:
-#    dest: /home/eve/.ssh/known_hosts
-#    create: yes
-#    state: present
-#    owner: eve
-#    group: eve
-#    line: "{{ lookup('pipe', 'ssh-keyscan -H -t rsa 10.1.17.4') }}"
-
-#- name: Add client to known hosts (2/2)
-#  lineinfile:
-#    dest: /home/eve/.ssh/known_hosts
-#    create: yes
-#    state: present
-#    owner: eve
-#    group: eve
-#    line: "{{ lookup('pipe', 'ssh-keyscan -H -t rsa client') }}"
-#    mode: 0644
+    mode: '0600'
 
 # ==== FLAG ====
 
 - name: Copy flag.txt to the machine
   copy:
-    src: flag.txt 
+    src: flag.txt
     dest: /root/WARNING-READ-ME.txt
     owner: root
     group: root
-    mode: u=rw,g=rw,o=rw 
+    mode: u=rw,g=rw,o=rw
 
 # ==== .bash_history
 
@@ -118,5 +97,3 @@
     dest: /home/eve/.bash_history
     owner: eve
     group: eve
-
-...
