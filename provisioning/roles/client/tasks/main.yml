@@ -31,7 +31,7 @@
     state: directory
     owner: eve
     group: eve
-    mode: 0700
+    mode: '0700'
 
 - name: copy web's public key to .ssh/authorized_keys
   copy:
@@ -39,7 +39,7 @@
     dest: /home/eve/.ssh/authorized_keys
     owner: eve
     group: eve
-    mode: 0600
+    mode: '0600'
 
 # ==== flag =====
 
@@ -56,5 +56,4 @@
     dest: /home/eve/top-secret/flag.txt
     owner: eve
     group: eve
-
 ...

@@ -5,7 +5,7 @@
 
 - name: Install common tools
   apt:
-    name: [vim, nano, mc, curl]
+    name: [ vim, nano, mc, curl ]
     state: present
     update_cache: yes
 
@@ -15,7 +15,7 @@
     dest: /usr/share/metasploit-framework/modules/exploits/
     owner: root
     group: root
-    mode: u=rw,g=rw,o=rw 
+    mode: u=rw,g=rw,o=rw
 
 - name: install exploitdb
   apt:
@@ -28,16 +28,16 @@
 
 - name: Remove other wordlists
   file:
-      path: "/usr/share/wordlists/{{ item }}"
-      state: absent
+    path: "/usr/share/wordlists/{{ item }}"
+    state: absent
   with_items:
-    -  dirb
-    -  dirbuster
-    -  fern-wifi
-    -  metasploit
-    -  nmap.lst
-    -  wfuzz
-    -  fasttrack.txt
+    - dirb
+    - dirbuster
+    - fern-wifi
+    - metasploit
+    - nmap.lst
+    - wfuzz
+    - fasttrack.txt
 
 - name: download ssh2john.py
   get_url:
@@ -45,6 +45,5 @@
     dest: /home/user/ssh2john.py
     owner: user
     group: user
-    mode: 0777
-
+    mode: '0777'
 ...
